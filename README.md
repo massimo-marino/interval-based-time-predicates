@@ -2,7 +2,7 @@
 
 **Files:** *timePredicates.go, timePredicates_test.go*
 
-A very simple implementation of some methods for an interval-based tenmporal logic based on [James F. Allen's work](http://web.mit.edu/larsb/Public/16.412/pset%204/allen94actions.pdf).  
+A very simple implementation of some methods for an interval-based temporal logic based on [James F. Allen's work](http://web.mit.edu/larsb/Public/16.412/pset%204/allen94actions.pdf).  
 This code can be used to implement scheduling/planning algorithms.
 
 ## Location
