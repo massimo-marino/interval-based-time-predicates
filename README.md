@@ -66,6 +66,7 @@ An event interval `ei` is a pair of events that identify a time interval in spac
 Constructors:  
 ````go
 func NewEventInterval(ev1 Event, ev2 Event) EventInterval
+
 func (ei *EventInterval) MakeNewEventInterval(ev1 Event, ev2 Event)
 ````
 
