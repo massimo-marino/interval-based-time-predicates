@@ -14,11 +14,11 @@ A location `l` is a point in space with a heading:
 #### Location methods
 
 Constructors:  
-````go
+```go
 func NewLocation(x float64, y float64, z float64, theta float64) Location
 
 func (l *Location) MakeNewLocation(x float64, y float64, z float64, theta float64)
-````
+```
 ### Event
 
 An event `ev` is a timed location:
@@ -28,22 +28,22 @@ An event `ev` is a timed location:
 #### Event Methods
 
 Constructors:  
-````go
+```go
 func NewEvent(t time.Time, l Location) Event
 
 func (ev *Event) MakeNewEvent(t time.Time, l Location)
-````
+```
 
 Getters:  
-````go
+```go
 func (ev Event) GetEventTime() time.Time
 
 func (ev Event) GetEventLocation() Location
-````
+```
 
 Event Time Predicates:  
 
-````go
+```go
 // After: After reports whether the event ev1 is after ev2.
 func (ev1 Event) After(ev2 Event) bool
 
@@ -52,7 +52,7 @@ func (ev1 Event) Before(ev2 Event) bool
 
 // Meets: Meets reports whether the event ev1 equals ev2.
 func (ev1 Event) Meets(ev2 Event) bool
-````
+```
 
 ## Event Interval
 
@@ -64,14 +64,14 @@ An event interval `ei` is a pair of events that identify a time interval in spac
 #### Event Interval Methods
 
 Constructors:  
-````go
+```go
 func NewEventInterval(ev1 Event, ev2 Event) EventInterval
 
 func (ei *EventInterval) MakeNewEventInterval(ev1 Event, ev2 Event)
-````
+```
 
 Getters:  
-````go
+```go
 func (ei EventInterval) GetStartEvent() Event
 
 func (ei EventInterval) GetEndEvent() Event
@@ -83,11 +83,11 @@ func (ei EventInterval) GetEventIntervalEndTime() time.Time
 func (ei EventInterval) GetEventIntervalStartLocation() Location
 
 func (ei EventInterval) GetEventIntervalEndLocation() Location
-````
+```
 
 Event Interval Time Predicates:  
 
-````go
+```go
 // After: After reports whether the event interval e11 is after ei2.
 // [ev1----ei2---ev2]...[ev1----ei1----ev2]
 func (ei1 EventInterval) After(ei2 EventInterval) bool
@@ -130,7 +130,7 @@ func (ei1 EventInterval) Finishes(ei2 EventInterval) bool
 //     [ev1----ei1----ev2]
 // [ev1--------ei2--------ev2]
 func (ei1 EventInterval) During(ei2 EventInterval) bool
-````
+```
 
 ## Examples
 
